@@ -1,13 +1,12 @@
 {
-  nixConfig.bash-prompt = "[nix-develop-pluto:] ";
-  description = "A very basic flake";
-  inputs.haskellNix.url = "github:input-output-hk/haskell.nix";
-  inputs.nixpkgs.follows = "haskellNix/nixpkgs-unstable";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.plutus.url = "github:input-output-hk/plutus";
-  inputs.cardano-node.url = "github:input-output-hk/cardano-node";
-  inputs.plutus-apps.url = "github:input-output-hk/plutus-apps";
-  outputs = { self, nixpkgs, plutus, flake-utils, haskellNix, cardano-node, plutus-apps }:
+  nixConfig.bash-prompt = "[nix-develop-hs2halo2:] ";
+  description = "hs2halo2";
+  inputs = {
+    haskellNix.url = "github:input-output-hk/haskell.nix";
+    nixpkgs.follows = "haskellNix/nixpkgs-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+  outputs = { self, nixpkgs, flake-utils, haskellNix }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         deferPluginErrors = true;
@@ -15,23 +14,13 @@
           haskellNix.overlay
           (final: prev: {
             # This overlay adds our project to pkgs
-            pluto =
+            hs2halo2 =
               final.haskell-nix.project' {
+                name = "hs2halo2";
                 src = ./.;
                 compiler-nix-name = "ghc8107";
-                projectFileName = "stack.yaml";
                 modules = [{
-                  packages = {
-                    marlowe.flags.defer-plugin-errors = deferPluginErrors;
-                    plutus-use-cases.flags.defer-plugin-errors = deferPluginErrors;
-                    plutus-ledger.flags.defer-plugin-errors = deferPluginErrors;
-                    plutus-contract.flags.defer-plugin-errors = deferPluginErrors;
-                    cardano-crypto-praos.components.library.pkgconfig =
-                      pkgs.lib.mkForce [ [ (import plutus { inherit system; }).pkgs.libsodium-vrf ] ];
-                    cardano-crypto-class.components.library.pkgconfig =
-                      pkgs.lib.mkForce [ [ (import plutus { inherit system; }).pkgs.libsodium-vrf ] ];
-
-                  };
+                  packages = {};
                 }];
                 shell.tools = {
                   cabal = { };
@@ -49,18 +38,16 @@
                   manual-ci() (
                     set -e
 
-                    ./ci/lint.sh
-                    cabal test
+                    ./lint.sh
                     nix-build
-                    ./ci/examples.sh
                   )
                   '';
               };
           })
         ];
         pkgs = import nixpkgs { inherit system overlays; inherit (haskellNix) config; };
-        flake = pkgs.pluto.flake { };
+        flake = pkgs.hs2halo2.flake { };
       in flake // {
-        defaultPackage = flake.packages."pluto:exe:pluto";
+        defaultPackage = flake.packages."hs2halo2:lib:hs2halo2";
       });
 }
