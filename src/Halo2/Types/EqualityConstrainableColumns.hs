@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.EqualityConstrainableColumns
@@ -11,8 +11,8 @@ module Halo2.Types.EqualityConstrainableColumns
   ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.ColumnIndex (ColumnIndex)
+import           Halo2.Prelude
+import           Halo2.Types.ColumnIndex (ColumnIndex)
 
 
 newtype EqualityConstrainableColumns = EqualityConstrainableColumns { getEqualityConstrainableColumns :: Set ColumnIndex }

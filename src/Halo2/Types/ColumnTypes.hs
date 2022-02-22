@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.ColumnTypes
@@ -8,8 +8,8 @@ module Halo2.Types.ColumnTypes
   ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.ColumnType (ColumnType)
+import           Halo2.Prelude
+import           Halo2.Types.ColumnType (ColumnType)
 
 
 newtype ColumnTypes = ColumnTypes { getColumnTypes :: [ColumnType] }

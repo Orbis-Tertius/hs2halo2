@@ -1,14 +1,14 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.TableColumn ( TableColumn (TableColumn) ) where
 
 
-import Halo2.Prelude
+import           Halo2.Prelude
 
-import Halo2.Types.Polynomial (Polynomial)
+import           Halo2.Types.Polynomial (Polynomial)
 
 
 newtype TableColumn = TableColumn { expression :: Polynomial }

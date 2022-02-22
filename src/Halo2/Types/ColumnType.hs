@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.ColumnType
@@ -8,7 +8,7 @@ module Halo2.Types.ColumnType
   ) where
 
 
-import Halo2.Prelude
+import           Halo2.Prelude
 
 
 data ColumnType = Fixed | Advice | Instance

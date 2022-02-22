@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.LookupArguments
@@ -8,8 +8,8 @@ module Halo2.Types.LookupArguments
   ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.LookupArgument (LookupArgument)
+import           Halo2.Prelude
+import           Halo2.Types.LookupArgument (LookupArgument)
 
 
 newtype LookupArguments = LookupArguments { getLookupArguments :: [LookupArgument] }

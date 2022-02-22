@@ -1,13 +1,13 @@
-{-# LANGUAGE DeriveGeneric #-}
-{-# LANGUAGE EmptyDataDeriving #-}
+{-# LANGUAGE DeriveGeneric              #-}
+{-# LANGUAGE EmptyDataDeriving          #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.RowCount ( RowCount (RowCount, getRowCount) ) where
 
 
-import Halo2.Prelude
+import           Halo2.Prelude
 
 
 newtype RowCount = RowCount { getRowCount :: Int }

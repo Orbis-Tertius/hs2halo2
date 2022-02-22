@@ -9,7 +9,7 @@ module Halo2.Prelude
   ) where
 
 
-import Prelude
-import Data.Map (Map)
-import Data.Set (Set)
-import GHC.Generics (Generic)
+import           Data.Map     (Map)
+import           Data.Set     (Set)
+import           GHC.Generics (Generic)
+import           Prelude

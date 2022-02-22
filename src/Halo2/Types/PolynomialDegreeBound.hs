@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.PolynomialDegreeBound
@@ -8,7 +8,7 @@ module Halo2.Types.PolynomialDegreeBound
   ) where
 
 
-import Halo2.Prelude
+import           Halo2.Prelude
 
 
 newtype PolynomialDegreeBound = PolynomialDegreeBound { getPolynomialDegreeBound :: Int }

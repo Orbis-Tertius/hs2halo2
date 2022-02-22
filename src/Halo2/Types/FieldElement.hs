@@ -1,12 +1,12 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.FieldElement ( FieldElement (FieldElement, getFieldElement ) ) where
 
 
-import Halo2.Prelude
+import           Halo2.Prelude
 
 
 newtype FieldElement = FieldElement { getFieldElement :: Integer }

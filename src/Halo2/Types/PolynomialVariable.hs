@@ -1,14 +1,14 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.PolynomialVariable ( PolynomialVariable (PolynomialVariable) ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.ColumnIndex
-import Halo2.Types.RowIndex
+import           Halo2.Prelude
+import           Halo2.Types.ColumnIndex
+import           Halo2.Types.RowIndex
 
 
 data PolynomialVariable =

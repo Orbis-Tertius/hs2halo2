@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude          #-}
 
 
 module Halo2.Types.EqualityConstraints
@@ -8,8 +8,8 @@ module Halo2.Types.EqualityConstraints
   ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.EqualityConstraint
+import           Halo2.Prelude
+import           Halo2.Types.EqualityConstraint
 
 
 newtype EqualityConstraints = EqualityConstraints
