@@ -9,7 +9,6 @@
   outputs = { self, nixpkgs, flake-utils, haskellNix }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
-        deferPluginErrors = true;
         overlays = [
           haskellNix.overlay
           (final: prev: {
@@ -19,9 +18,6 @@
                 name = "hs2halo2";
                 src = ./.;
                 compiler-nix-name = "ghc8107";
-                modules = [{
-                  packages = {};
-                }];
                 shell.tools = {
                   cabal = { };
                   ghcid = { };
