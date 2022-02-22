@@ -1,5 +1,5 @@
-{-# LANGUAGE DeriveGeneric              #-}
-{-# LANGUAGE NoImplicitPrelude          #-}
+{-# LANGUAGE DeriveGeneric     #-}
+{-# LANGUAGE NoImplicitPrelude #-}
 
 
 module Halo2.Types.CircuitConfig ( CircuitConfig (CircuitConfig) ) where

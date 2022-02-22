@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveGeneric              #-}
-{-# LANGUAGE EmptyDataDeriving          #-}
-{-# LANGUAGE NoImplicitPrelude          #-}
+{-# LANGUAGE DeriveGeneric     #-}
+{-# LANGUAGE EmptyDataDeriving #-}
+{-# LANGUAGE NoImplicitPrelude #-}
 
 
 module Halo2.Types.RowCount ( RowCount (RowCount, getRowCount) ) where
