@@ -5,8 +5,8 @@
 module Halo2.Types.WitnessColumns ( WitnessColumns (WitnessColumns) ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.ColumnIndex (ColumnIndex)
+import           Halo2.Prelude
+import           Halo2.Types.ColumnIndex (ColumnIndex)
 
 
 -- A witness column is one of the columns which is

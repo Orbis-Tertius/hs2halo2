@@ -1,15 +1,15 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric     #-}
 {-# LANGUAGE NoImplicitPrelude #-}
 
 
 module Halo2.Types.CircuitWithWitnesses ( CircuitWithWitnesses (CircuitWithWitnesses) ) where
 
 
-import Halo2.Prelude
-import Halo2.Types.Circuit (Circuit)
-import Halo2.Types.WitnessColumns (WitnessColumns)
-import Halo2.Types.WitnessGenerationContext (WitnessGenerationContext)
-import Halo2.Types.Witness (Witness)
+import           Halo2.Prelude
+import           Halo2.Types.Circuit                  (Circuit)
+import           Halo2.Types.Witness                  (Witness)
+import           Halo2.Types.WitnessColumns           (WitnessColumns)
+import           Halo2.Types.WitnessGenerationContext (WitnessGenerationContext)
 
 
 -- A witness is the subset of the advice columns which are computed
