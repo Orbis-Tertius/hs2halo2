@@ -9,7 +9,7 @@ module Sigma11Field
   ( SecondOrderFormula (SecondOrderFormula)
   , SecondOrderQuantifier (ExistsFunction)
   , FirstOrderFormula (Exists, ForAll, And, Or, Not, Top, Bottom, Equals)
-  , Term (Apply, Plus, Times, Constant)
+  , Term (Apply, Plus, Times, Constant, Variable)
   , FunctionArity (FunctionArity)
   , FunctionName (FunctionName)
   , FieldElementName (FieldElementName)
@@ -44,6 +44,7 @@ data Term =
   | Plus Term Term
   | Times Term Term
   | Constant FieldElement
+  | Variable FieldElementName
 
 
 newtype FunctionArity = FunctionArity Integer
