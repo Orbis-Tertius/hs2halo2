@@ -13,6 +13,7 @@ library
     Halo2.Types
     Halo2.Types.Circuit
     Halo2.Types.CircuitConfig
+    Halo2.Types.CircuitWithWitnesses
     Halo2.Types.Coefficient
     Halo2.Types.ColumnType
     Halo2.Types.ColumnIndex
@@ -36,6 +37,9 @@ library
     Halo2.Types.RowIndex
     Halo2.Types.RowCount
     Halo2.Types.TableColumn
+    Halo2.Types.Witness
+    Halo2.Types.WitnessColumns
+    Halo2.Types.WitnessGenerationContext
 
   build-depends:
     base >= 4.9 && < 5,
