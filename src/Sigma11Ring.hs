@@ -10,7 +10,6 @@ module Sigma11Ring
   , SecondOrderQuantifier (ExistsFunction)
   , FirstOrderFormula (Exists, ForAll, And, Or, Not, Top, Bottom, Equals)
   , Term (Apply, Plus, Times, Constant, Variable)
-  , FunctionArity (FunctionArity)
   , FunctionName (FunctionName)
   , RingElementName (RingElementName)
   , DeBruijnIndex (DeBruijnIndex)
@@ -25,7 +24,9 @@ import Prelude (Integer)
 data SecondOrderFormula = SecondOrderFormula [SecondOrderQuantifier] FirstOrderFormula
 
 
-newtype SecondOrderQuantifier = ExistsFunction FunctionArity
+-- The list of upper bounds specifies both the arity of the
+-- function and the upper bound of each argument.
+newtype SecondOrderQuantifier = ExistsFunction [UpperBound]
 
 
 data FirstOrderFormula =
@@ -45,9 +46,6 @@ data Term =
   | Times Term Term
   | Constant RingElement
   | Variable RingElementName
-
-
-newtype FunctionArity = FunctionArity Integer
 
 
 -- 1 refers to the variable quantified over by the innermost
@@ -75,4 +73,4 @@ newtype DeBruijnIndex = DeBruijnIndex Integer
 newtype RingElement = RingElement Integer
 
 
-newtype UpperBound = UpperBound Term
+newtype UpperBound = UpperBound RingElement
