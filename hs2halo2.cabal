@@ -36,6 +36,7 @@ library
     Halo2.Types.RowIndex
     Halo2.Types.RowCount
     Halo2.Types.TableColumn
+    Sigma11Ring
 
   build-depends:
     base >= 4.9 && < 5,
